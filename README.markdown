@@ -10,16 +10,7 @@ Dead Simple! is an easy to use feature poor blogging application.
 
 ## Setup
 
-Open up index.php
-
-Change the SITE_URL constant to the url of your blog
-```php
-    define('SITE_URL', 'http://path/to/your/blog/');
-```
-
-Create a database and run App/config/schema.sql
-
-Open up App/config/database.php and modify database information to match your database.
+Go To /Install - enter relevant information.
 
 ## Login
 

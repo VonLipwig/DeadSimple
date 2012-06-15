@@ -9,15 +9,14 @@ session_start();
  * - Change APP_PATH if required.
  */
 define('APP_PATH', 'App/');
+require(APP_PATH . 'config/constants.php');
 
-define('SITE_URL', 'http://localhost/blog/');
 
-define('SRC_PATH', APP_PATH . 'Src/');
-define('CONFIG_PATH', APP_PATH . 'config/');
-define('ROUTE_PATH', APP_PATH . 'routes/');
-define('TEMPLATE_PATH', 'Themes/default/views/');
-define('HELPER_PATH', APP_PATH . 'helpers/');
-
+if (file_exists('Install')) {
+	exit('Please remove the install directory from this installation');
+} elseif ( ! defined('SITE_URL')) {
+	exit('This website is not properly installed.');
+}
 
 /**
  * Load Slim
